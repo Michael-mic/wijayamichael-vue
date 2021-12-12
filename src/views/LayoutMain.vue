@@ -36,6 +36,12 @@
               About
             </router-link>
           </li>
+          <li class="nav-item">
+            <router-link to="/user" class="nav-link active" aria-current="page" href="#">
+              <span data-feather="shopping-cart"></span>
+              User
+            </router-link>
+          </li>
         </ul>
       </div>
     </nav>
