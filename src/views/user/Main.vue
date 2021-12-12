@@ -1,10 +1,10 @@
 <template>
     <div>
         <layout-main>
-          <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
-        <h1 class="h2">User</h1>
-          </div>
-          <div class="row row-cols-1 row-cols-md-4 row-cols-sm-2 g-3">
+            <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+            <h1 class="h2">User</h1>
+            </div>
+            <div class="row row-cols-1 row-cols-md-4 row-cols-sm-2 g-3">
             <div v-for="user in dataUsers" :key="user.id" class="col card" style="width: 18rem ;">
             <img src="/profile.png" class="card-img-top" alt="...">
             <div class="card-body">
@@ -18,7 +18,7 @@
                   <strong>{{user.username}}</strong><br>
                   {{user.email}}
                   </address>
-            <a href="#" class="btn btn-primary">Go somewhere</a>
+            <router-link :to="{name: 'detailuser', params: {id: user.id, username: user.username}}" class="btn btn-primary">Detail User</router-link>
           </div>
     </div>
           </div>
